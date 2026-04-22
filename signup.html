@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<title>Vibra Universe — Sign Up</title>
+	<link rel="stylesheet" href="style.css">
+	
+	
+	
+<script type="text/javascript">
+
+var lastetype="";
+function hidePopup() {
+    var popup = document.getElementById("popup");
+    popup.style.top = "-150px";
+	if(lastetype==="success"){
+		window.location.href = "index.html";
+	}
+}
+function showPopup(message, type)
+{
+    var popup = document.getElementById("popup");
+    var text = document.getElementById("popup-message");
+	lastetype=type;
+    popup.className = "popup " + type; 
+    text.innerText = message;
+     popup.style.top = "0px"; 	
+}
+
+function checkForm(){
+	var firstName=document.getElementById("name").value;
+	var lastName=document.getElementById("prenom").value;
+	var email=document.getElementById("email").value;
+	var password=document.getElementById("password").value;
+	var confirm=document.getElementById("confirm").value;
+
+	var gender=document.getElementsByName("sexe");
+	var genres=document.getElementsByName("genres");
+	
+	if (firstName==="" && lastName==="" && email==="" && password==="" &&
+	confirm === "" && 
+	!Array.from(gender).some(g => g.checked) &&
+    !Array.from(genres).some(g => g.checked))
+	{
+		showPopup("⚠️Form is empty! Please fill out the form⚠️","error");
+		return false;}
+		
+	if (firstName == ""){
+		showPopup("⚠️Please enter your first name⚠️","error");
+		return false;}
+		
+			
+	if (lastName == "") {
+		showPopup("⚠️Please enter your last name⚠️","error");
+		return false;}
+		
+		
+
+	if (email == "") {
+		showPopup("⚠️Please enter your email⚠️","error");
+		return false;}
+	if (email.indexOf("@") == -1 || email.indexOf(".") == -1) {
+		showPopup("⚠️Please enter a valid email address⚠️","error");
+		return false;}
+	
+	
+	if (password == "") {
+		showPopup("⚠️Please enter your password⚠️","error");
+		return false;}
+		
+	if (confirm == "") {
+		showPopup("⚠️Please confirm your password⚠️","error");
+		return false;}
+
+	if (password != confirm) {
+		showPopup("⚠️Passwords do not match⚠️","error");
+		return false;}
+		
+		
+		
+	var genderChecked = false;
+	for (var i = 0; i < gender.length; i++) {
+    if (gender[i].checked) {
+		genderChecked = true;}
+		}
+
+	if (!genderChecked) {
+		showPopup("⚠️Please select your gender⚠️","error");
+		return false;}
+		
+	var musicChecked = false;
+	for (var j = 0; j < genres.length; j++) {
+    if (genres[j].checked) {
+		musicChecked = true;}
+	}
+
+	if (!musicChecked) {
+		showPopup("⚠️Please select at least one music genre⚠️","error");
+		return false;}	
+		
+		
+	showPopup("🎉 Welcome " + firstName +
+	"! Your account has been created successfully 🎶", "success");
+	
+	return true;			
+}
+</script>
+</head>
+
+<body class="form" >
+<header>
+	<a href="index.html" class="logo-contact"><img src="img/loogo.png" alt="Logo" id="logoimage"></a>
+	<div class="header-text">
+        <h1 class="special-text">🎶 Vibra 🎶</h1>
+        <p class="text">Join the wave and feel the music.</p>
+    </div>
+</header>
+<div class="popup" id="popup">
+  <p id="popup-message"></p>
+  <button onclick="hidePopup()">OK</button>
+</div>
+
+<form class="form-box">
+  <label for="nom">First Name</label>
+  <input type="text" id="name" placeholder="Enter Your First Name" >
+  
+  <label for="prenom">Last Name</label>
+  <input type="text" id="prenom" placeholder="Enter Your Last Name" >
+  
+  <label for="email">Email</label>
+  <input type="email" id="email" placeholder="Enter Your Email" >
+
+  <label for="password">Password</label>
+  <input type="password" id="password" placeholder="Entrez votre mot de passe">
+
+  <label for="confirm">Confirm Password</label>
+  <input type="password" id="confirm" placeholder="Confirmez votre mot de passe">
+  
+  <fieldset>
+    <legend>Gender</legend>
+    <input type="radio" id="male" name="sexe" value="male">
+    <label for="male">Male</label>
+    <input type="radio" id="female" name="sexe" value="female">
+    <label for="female">Female</label>
+  </fieldset>
+  
+  <fieldset>
+    <legend>Gener of musique </legend>
+    <input type="checkbox" id="arabic" name="genres" value="arabic">
+    <label for="arabic">Arabic</label>
+	
+    <input type="checkbox" id="pop" name="genres" value="Pop">
+    <label for="pop">Pop</label>
+	
+    <input type="checkbox" id="rap" name="genres" value="Rap">
+    <label for="rap">Rap</label>
+	
+	<input type="checkbox" id="jazz" name="genres" value="Jazz">
+    <label for="jazz">Jazz</label>
+	
+	<input type="checkbox" id="afrobeats" name="genres" value="afrobeats">
+    <label for="afrobeats">Afrobeats</label>
+  </fieldset>
+ 
+  <button class="btn-sign" type="button" onclick="checkForm()">Sign Up</button>
+
+</form>
+</body>
+</html>

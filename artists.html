@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Vibra Universe — Artists</title>
+  <link rel="stylesheet" href="style.css">
+  
+</head>
+<body>
+
+   <nav>
+    <a href="index.html"><img src="img/loogo.png" alt="Logo" id="logoimage"></a>
+	<div class="menu">
+		<a href="index.html">Accueil</a>
+        <a href="artists.html">Artists</a>
+		<a href="news.html">Top Songs</a>
+		<a href="events.html">Events</a>
+		<a href="contact.html">Contact</a>
+	</div>
+	</nav>
+	
+	
+	
+<div class="head">
+  <h1 class="special-text" >Explore Artists</h1>
+</div>
+
+
+
+  <div class="category">
+    <h2>Arabic</h2>
+    <div class="artists-container" id="arabic-artists"></div>
+  </div>
+
+
+  <div class="category">
+    <h2>Pop</h2>
+    <div class="artists-container" id="pop-artists"></div>
+  </div>
+
+  <div class="category">
+    <h2>Rap</h2>
+    <div class="artists-container" id="rap-artists"></div>
+  </div>
+
+  <div class="category">
+    <h2>Afrobeats</h2>
+<div class="artists-container" id="afrobeats-artists"></div>
+  </div>
+
+  <div class="category">
+    <h2>Jazz</h2>
+    <div class="artists-container" id="jazz-artists"></div>
+  </div>
+
+  
+  
+  <script>
+     artistsData = {
+        "Arabic": [
+        {name: "Saint Levant", img: "img/saint-levant-1.jpg" ,page: "https://en.wikipedia.org/wiki/saint-levant"},
+        { name: "Fairuz", img: "img/fairouz.jpg",page: "https://en.wikipedia.org/wiki/Fairuz" },
+        {name: "Warda", img: "img/warda.jpg",page:"https://en.wikipedia.org/wiki/Warda_Al-Jazairia" },
+        {name: "Dystinct", img: "img/DYSTINCT.jpg",page:"https://fr.wikipedia.org/wiki/Dystinct"},  
+        { name: "Nancy Ajram ", img: "img/nancyy.jpg",page:"https://fr.wikipedia.org/wiki/Nancy_Ajram" },
+        {name: "Umm Kulthum", img: "img/kalthom.jpg" ,page:"https://fr.wikipedia.org/wiki/Oum_Kalthoum"},
+        {name: "Cheb Khaled", img: "img/khaled.jpg",page:"https://fr.wikipedia.org/wiki/Khaled_(chanteur)" },
+         { name: "Mohamed Hamaki ", img: "img/hammi.jpg",page:"https://en.wikipedia.org/wiki/Mohamed_Hamaki" },
+        {name: "Elyanna", img: "img/elyanna.jpg" ,page:"https://en.wikipedia.org/wiki/Elyanna" },
+        {name: "Emel Mathlouth", img: "img/emel.jpg",page:"https://en.wikipedia.org/wiki/Emel_Mathlouthi"  },
+        
+      ],
+      "Pop": [
+        { name: "Lana Del Rey", img: "img/lala (1).jpg", page: "https://en.wikipedia.org/wiki/Lana Del Rey" },
+        { name: "Billie Eilish ", img: "img/billie.jpg",page:"https://en.wikipedia.org/wiki/Billie_Eilish" },
+        { name: "Adele", img: "img/adele.jpg",page:"https://en.wikipedia.org/wiki/Adele"  },
+        { name: "The Weeknd", img: "img/week.jpg",page:"https://en.wikipedia.org/wiki/The Weeknd"  },
+        { name: "Lady Gaga", img: "img/images.jpg",page:"https://en.wikipedia.org/wiki/The Lady Gaga"  },
+        { name: "Sza", img: "img/sza.jpg",page:"https://en.wikipedia.org/wiki/Sza"  },
+        { name: "Shakira", img: "img/shakiras.jpg",page:"https://en.wikipedia.org/wiki/Shakira"  },
+        { name: "Olivia Rodrigo", img: "img/olivia.jpg",page:"https://en.wikipedia.org/wiki/Olivia Rodrigo"  },
+        { name: "Post Malone", img: "img/post.jpg",page:"https://en.wikipedia.org/wiki/Post Malone" },
+        { name: "Bruno Mars", img: "img/bruno.jpg",page:"https://en.wikipedia.org/wiki/Bruno Mars"  },
+        
+        
+      ],
+      "Rap": [
+        { name: "Eminem", img: "img/e.jpg", page: "https://en.wikipedia.org/wiki/Eminem"},
+        { name: "Kendrick Lamar", img: "img/kk.jpg",page:"https://en.wikipedia.org/wiki/Kendrick Lamar"},
+        { name: "J. Cole", img: "img/jt.jpg" ,page:"https://en.wikipedia.org/wiki/J. Cole"},
+        { name: "Cardi B", img: "img/cardi.jpg",page:"https://en.wikipedia.org/wiki/Cardi B" },
+        { name: "Nicki Minaj", img: "img/nicki.jpg",page:"https://en.wikipedia.org/wiki/Nicki Minaj" },
+        { name: "Snoop Dog", img: "img/snoop.jpg",page:"https://en.wikipedia.org/wiki/Snoop Dog" },
+        { name: "Savage 21", img: "img/21.jpg",page:"https://en.wikipedia.org/wiki/Tyler, The Creator " },
+        { name: "Tyler, The Creator ", img: "img/tyler.jpg" ,page:"https://en.wikipedia.org/wiki/Tyler, The Creator"},
+        { name: "Megan Thee", img: "img/megan.jpg" ,page:"https://en.wikipedia.org/wiki/Megan Thee"},
+        { name: "Doja Cat", img: "img/doja.jpg",page:"https://en.wikipedia.org/wiki/Doja Cat" },
+        
+      ],
+      "HipHop": [
+        { name: "Rema", img: "img/rima.jpg",page:"https://en.wikipedia.org/wiki/Rema"  },
+        { name:  "Ayra Starr", img: "img/zat.jpg",page:"https://en.wikipedia.org/wiki/Ayra Starr"  },
+         { name: "Davido", img: "img/david.jpg" ,page:"https://en.wikipedia.org/wiki/Davido" },
+        { name: "Burna Boy", img: "img/nn.jpg" ,page:"https://en.wikipedia.org/wiki/Burna Boy" },
+        { name: "Wizkid", img: "img/gg.jpg" ,page:"https://en.wikipedia.org/wiki/Wizkid" },
+        { name: "Tems", img: "img/ment.jpg" ,page:"https://en.wikipedia.org/wiki/Tems" },
+        { name: "Asake", img: "img/azak.jpg",page:"https://en.wikipedia.org/wiki/Asake"  },
+        { name:"Omah Lay", img: "img/oo.jpg",page:"https://en.wikipedia.org/wiki/Omah Lay"  },
+        { name: "Adekunle Gold", img: "img/ii.jpg" ,page:"https://en.wikipedia.org/wiki/Adekunle Gold" },
+        { name: "Fireboy DML", img: "img/pp.jpg" ,page:"https://en.wikipedia.org/wiki/Fireboy DML" },
+
+      ],
+      "Jazz": [
+       { name: "Frank Sinatra", img: "img/sina.jpg",page:"https://en.wikipedia.org/wiki/Frank Sinatra" },
+       { name: "Louis Armstrong", img: "img/louis.jpg" ,page:"https://en.wikipedia.org/wiki/Louis Armstrong" },
+       { name: "Samara Joy", img: "img/sst.jpg",page:"https://en.wikipedia.org/wiki/Samara Joy" },
+       { name: "Laufey", img: "img/lauf.jpg",page:"https://en.wikipedia.org/wiki/Laufey" },
+       { name: "Emma", img: "img/emma.jpg" ,page:"https://en.wikipedia.org/wiki/Emma" },
+       { name: "Billie Holiday", img: "img/bil.jpg" ,page:"https://en.wikipedia.org/wiki/Billie Holiday" },
+       { name: "Tony Bennett", img: "img/tony.jpg" ,page:"https://en.wikipedia.org/wiki/Tony Bennett" },
+       { name: "Nina Simone", img: "img/nina.jpg" ,page:"https://en.wikipedia.org/wiki/Nina Simone" }
+      ],
+     
+    };
+
+function displayArtists(containerId, artists) {
+  const container = document.getElementById(containerId);
+  if (!container) return;
+  container.innerHTML = '';
+
+  artists.forEach(artist => {
+    const link = document.createElement('a');       
+    link.href = artist.page || "#";                 
+    link.target = "_blank";                         
+
+    const card = document.createElement('div');
+    card.className = 'artist';
+
+    const img = document.createElement('img');
+    img.src = artist.img;
+    img.alt = artist.name;
+    img.onerror = () => img.src = "https://via.placeholder.com/220?text=No+Image";
+
+    const caption = document.createElement('p');
+    caption.textContent = artist.name;
+
+    card.appendChild(img);
+    card.appendChild(caption);
+    link.appendChild(card);       
+    container.appendChild(link);
+  });
+}
+
+window.onload = () => {
+  displayArtists("pop-artists", artistsData.Pop);
+  displayArtists("rap-artists", artistsData.Rap);
+  displayArtists("afrobeats-artists", artistsData.HipHop);
+  displayArtists("jazz-artists", artistsData.Jazz);
+  displayArtists("arabic-artists", artistsData.Arabic);
+};
+</script>
+
+  <footer>
+	<div class="social">
+      <img src="img/facebook.png" alt="Facebook" class="icon">
+      <img src="img/instagram.png" alt="Instagram" class="icon">
+      <img src="img/playstore.png" alt="Play Store" class="icon">
+    </div>
+	<p>&copy;2025🎶<strong>Vibra</strong>🎶 Made with ❤️ for music lovers.</p>
+  </footer>
+</body>
+</html>
