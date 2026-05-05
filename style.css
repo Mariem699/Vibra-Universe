@@ -684,31 +684,61 @@ main {
 @media (max-width: 600px) {
 
   
-    nav {
+     nav {
         flex-direction: row;
         align-items: center;
         justify-content: space-between;
         padding: 10px 14px;
-        flex-wrap: wrap;
         gap: 0;
     }
 
     .logo-contact {
         position: static;
-        flex-shrink: 0;
+    }
+
+
+    .hamburger-btn {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        cursor: pointer;
+        padding: 6px;
+        background: none;
+        border: none;
+    }
+
+    .hamburger-btn span {
+        display: block;
+        width: 24px;
+        height: 2px;
+        background: purple;
+        border-radius: 2px;
+        transition: 0.3s;
     }
 
     .menu {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        gap: 10px 16px;
+        display: none;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        flex-direction: column;
+        background: #f5ede6;
+        padding: 10px 20px 16px;
+        gap: 12px;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        box-sizing: border-box;
         margin-right: 0;
-        align-items: center;
+    }
+
+    .menu.open {
+        display: flex;
     }
 
     .menu a {
-        font-size: 13px;
+        font-size: 16px;
+        padding: 4px 0;
+        border-bottom: 1px solid rgba(161,85,185,0.15);
     }
 
  
