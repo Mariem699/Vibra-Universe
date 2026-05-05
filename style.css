@@ -742,15 +742,25 @@ main {
     }
 
  
-    .head {
-        padding-top: 100px;
+    header {
+        padding-top: 70px;
     }
 
+    .header-text {
+        padding-top: 10px;
+    }
+
+    .head {
+        padding-top: 70px;
+    }
 
     .special-text {
+        padding-top: 0; 
         font-size: 24px;
-        padding: 0 10px;
+        padding-left: 10px;
+        padding-right: 10px;
     }
+
 
     .title {
         font-size: 20px;
