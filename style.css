@@ -685,24 +685,30 @@ main {
 
   
     nav {
-        flex-direction: column;
-        align-items: flex-start;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
         padding: 10px 14px;
-        gap: 10px;
+        flex-wrap: wrap;
+        gap: 0;
     }
 
     .logo-contact {
         position: static;
+        flex-shrink: 0;
     }
 
     .menu {
-        margin-right: 0;
-        gap: 16px;
+        display: flex;
+        flex-direction: row;
         flex-wrap: wrap;
+        gap: 10px 16px;
+        margin-right: 0;
+        align-items: center;
     }
 
     .menu a {
-        font-size: 15px;
+        font-size: 13px;
     }
 
  
