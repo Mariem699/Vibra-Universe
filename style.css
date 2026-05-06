@@ -783,7 +783,14 @@ main {
     }
 
     .butn {
-        width: 80%;
+        width: 70%;
+        box-sizing: border-box;
+        padding: 16px;
+        font-size: 16px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 56px;
     }
 
   
